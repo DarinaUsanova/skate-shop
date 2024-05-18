@@ -1,7 +1,7 @@
-:root {
-  --bg-white: #fff;
-  --text-color: #000;
-}
+$bg-white: #fff;
+$text-color: #000;
+
+$body-font-size: 16px;
 
 *,
 *::after,
@@ -10,7 +10,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-// text styles
+
+// text styles mobile
+
 .small {
   font-size: 0.916rem;
   line-height: 1.25rem;
@@ -26,27 +28,48 @@
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
+
 // card styles
 body {
-  background-color: var(--bg-white);
-  font-size: 16px;
+  font-family: "Consolas", "Roboto", "Helvetica Neue", "Arial", Courier,
+    monospace;
+  background-color: $bg-white;
   display: flex;
   justify-content: center;
-
+  font-size: $body-font-size;
+  // banner card styles
   .card__container {
-    background-color: var(--bg-white);
+    background-color: $bg-white;
     width: 23.5rem;
     height: 13.5rem;
     padding: 0.8rem;
 
     .card__banner {
-      border: 0.125rem solid var(--text-color);
+      border: 0.125rem solid $text-color;
       width: auto;
       height: 11.6rem;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+    }
+  }
+  //product card styles mobile
+  .product__card {
+    display: flex;
+    flex-direction: column;
+    width: 10.3rem;
+
+    .product__info {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 0.6rem;
+    }
+
+    .product__image {
+      width: 10.3rem;
+      height: 11.6rem;
+      background-color: $text-color;
     }
   }
 }
