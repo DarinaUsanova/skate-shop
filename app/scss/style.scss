@@ -10,6 +10,9 @@ $body-font-size: 16px;
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  font-size: $body-font-size;
+}
 
 // text styles mobile
 
@@ -36,15 +39,14 @@ body {
   background-color: $bg-white;
   display: flex;
   justify-content: center;
-  font-size: $body-font-size;
   // banner card styles
-  .card__container {
+  .card {
     background-color: $bg-white;
     width: 23.5rem;
     height: 13.5rem;
     padding: 0.8rem;
 
-    .card__banner {
+    &__banner {
       border: 0.125rem solid $text-color;
       width: auto;
       height: 11.6rem;
@@ -52,6 +54,10 @@ body {
       justify-content: center;
       align-items: center;
       flex-direction: column;
+    }
+    &__text {
+      text-transform: uppercase;
+      text-align: center;
     }
   }
   //product card styles mobile
@@ -63,7 +69,7 @@ body {
     .product__info {
       display: flex;
       justify-content: space-between;
-      padding-top: 0.6rem;
+      padding-top: 10px;
     }
 
     .product__image {
