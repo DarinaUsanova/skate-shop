@@ -13,15 +13,28 @@ function styles() {
     .pipe(browserSync.stream());
 }
 
+function layoutStyles() {
+  return src('layout/**.scss')
+    .pipe(concat('style.css'))
+    .pipe(scss())
+    .pipe(dest('layout/css'))
+    .pipe(browserSync.stream());
+}
+
 function watcher() {
   watch(["app/scss/style.scss"], styles);
   watch(["app/*.html"]).on("change", browserSync.reload);
 }
 
+function layoutWatcher() {
+  watch(['layout/*.scss'], layoutStyles);
+  watch(['layout/*.html']).on('change', browserSync.reload);
+}
+
 function initBrowserSync() {
   browserSync.init({
     server: {
-      baseDir: "app/",
+      baseDir: "layout/", // app/
     },
   });
 }
@@ -41,4 +54,5 @@ exports.watcher = watcher;
 exports.browserSync = initBrowserSync;
 
 exports.build = series(cleanDist, building);
-exports.default = parallel(styles, initBrowserSync, watcher);
+// exports.default = parallel(styles, initBrowserSync, watcher);
+exports.default = parallel(styles, layoutStyles, initBrowserSync, watcher, layoutWatcher);
