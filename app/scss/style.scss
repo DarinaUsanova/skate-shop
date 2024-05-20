@@ -98,6 +98,19 @@ body {
     &__text {
       text-transform: uppercase;
       text-align: center;
+      font-size: $text-size-16pt;
+      line-height: $text-lh-20pt;
+      letter-spacing: $text-letterspacing-100pt;
+
+      @media (min-width: 1280px) {
+        font-size: $text-size-20pt;
+        line-height: $text-lh-24pt;
+      }
+
+      @media (min-width: 1920px) {
+        font-size: $text-size-28pt;
+        line-height: $text-lh-32pt;
+      }
     }
   }
   //product card styles mobile
@@ -119,6 +132,12 @@ body {
       // height: 11.6rem;
       background-color: red;
 
+      &__title,
+      &__price {
+        font-size: $text-size-11pt;
+        line-height: $text-lh-15pt;
+      }
+
       @media (min-width: 1280px) {
         width: 221px;
         height: 250px;
@@ -127,6 +146,12 @@ body {
       @media (min-width: 1920px) {
         width: 292px;
         height: 330px;
+
+        &__title,
+        &__price {
+          font-size: $text-size-16pt;
+          line-height: $text-lh-20pt;
+        }
       }
     }
   }
