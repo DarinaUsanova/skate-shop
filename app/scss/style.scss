@@ -56,8 +56,7 @@ button {
 
 // card styles
 body {
-  font-family: "Consolas", "Roboto", "Helvetica Neue", "Arial", Courier,
-    monospace;
+  font-family: "Courier New", monospace;
   background-color: $bg-white;
   display: flex;
   justify-content: center;
@@ -204,4 +203,25 @@ body {
       }
     }
   }
+
+  //event card styles
+  // .event-card {
+  //   width: 375px;
+  //   height: 130px;
+  //   padding: 15px;
+  //   border-top: 1px solid $text-color;
+  //   border-bottom: 1px solid $text-color;
+  //   background-color: pink;
+
+  //   &__title {
+  //     text-transform: uppercase;
+  //     font-size: $text-size-20pt;
+  //     line-height: $text-lh-40pt;
+  //   }
+
+  //   &__text {
+  //     font-size: $text-size-11pt;
+  //     line-height: $text-lh-15pt;
+  //   }
+  // }
 }
