@@ -44,7 +44,20 @@ body {
     background-color: $bg-white;
     width: 23.5rem;
     height: 13.5rem;
-    padding: 0.8rem;
+    padding: 0 15px;
+
+    @media (min-width: 1280px) {
+      padding-bottom: 16px;
+      padding-right: 16px;
+    }
+
+    @media (min-width: 1920px) {
+      // grid-column-start: 9;
+      padding-bottom: 16px;
+      padding-right: 16px;
+      width: 808px;
+      height: 330px;
+    }
 
     &__banner {
       border: 0.125rem solid $text-color;
@@ -54,6 +67,11 @@ body {
       justify-content: center;
       align-items: center;
       flex-direction: column;
+
+      @media (min-width: 1280px) {
+        width: 100%;
+        height: 100%;
+      }
     }
     &__text {
       text-transform: uppercase;
@@ -61,21 +79,33 @@ body {
     }
   }
   //product card styles mobile
-  .product__card {
+  .product-card {
     display: flex;
     flex-direction: column;
-    width: 10.3rem;
+    // width: 10.3rem;
 
-    .product__info {
+    &__info {
       display: flex;
       justify-content: space-between;
       padding-top: 10px;
     }
 
-    .product__image {
-      width: 10.3rem;
-      height: 11.6rem;
-      background-color: $text-color;
+    &__image {
+      width: 165px;
+      height: 186px;
+      // width: 10.3rem;
+      // height: 11.6rem;
+      background-color: red;
+
+      @media (min-width: 1280px) {
+        width: 221px;
+        height: 250px;
+      }
+
+      @media (min-width: 1920px) {
+        width: 292px;
+        height: 330px;
+      }
     }
   }
 }
