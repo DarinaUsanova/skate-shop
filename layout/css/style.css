@@ -65,7 +65,7 @@ body {
   .main {
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 24px;
-    grid-template-areas: "s s s s s s s s s s s s" "i i i i i i i i b b b b" "p p p p p p p p p p p p" "e e e e e e e e e e e e e" "a a a a a a a a a a a a a" "c c c c c c c c c c c c c";
+    grid-template-areas: "s s s s s s s s s s s s" "i i i i i i i i b b b b" "p p p p p p p p p p p p" "b2 b2 b2 b2 b2 b2 b2 b2 i2 i2 i2 i2" "e e e e e e e e e e e e " "a a a a a a a a a a a a " "c c c c c c c c c c c c ";
   }
 }
 
@@ -125,7 +125,21 @@ body {
 .card__container {
   grid-area: b;
   background-color: #fff;
-  padding: 0.8rem;
+  padding: 0 15px;
+}
+@media (min-width: 1280px) {
+  .card__container {
+    grid-column-start: 10;
+    padding-bottom: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width: 1920px) {
+  .card__container {
+    grid-column-start: 9;
+    padding-bottom: 16px;
+    padding-right: 16px;
+  }
 }
 .card__container.banner--2 {
   grid-area: b2;
@@ -167,7 +181,7 @@ body {
 .product__card .product__info {
   display: flex;
   justify-content: space-between;
-  padding-top: 0.6rem;
+  padding-top: 10px;
 }
 .product__card .product__image {
   width: 165px;
@@ -190,7 +204,7 @@ body {
 .items {
   grid-area: i;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   gap: 15px;
   padding: 0 15px;
@@ -308,7 +322,7 @@ body {
   }
 }
 .articles .article {
-  width: 23%;
+  width: 165px;
   height: 123px;
   background-color: pink;
 }
