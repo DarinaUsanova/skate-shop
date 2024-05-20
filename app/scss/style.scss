@@ -3,6 +3,24 @@ $text-color: #000;
 
 $body-font-size: 16px;
 
+$text-size-11pt: 0.92rem;
+$text-size-16pt: 1.33rem;
+$text-size-20pt: 1.67rem;
+$text-size-28pt: 2.33rem;
+$text-size-30pt: 2.5rem;
+$text-size-36pt: 3rem;
+$text-size-48pt: 4rem;
+
+$text-lh-15pt: 1.25rem;
+$text-lh-20pt: 1.67rem;
+$text-lh-24pt: 2rem;
+$text-lh-32pt: 2.67rem;
+$text-lh-34pt: 2.83rem;
+$text-lh-40pt: 3.33rem;
+$text-lh-52pt: 4.33rem;
+
+$text-letterspacing-100pt: 0.4rem;
+
 *,
 *::after,
 *::before {
@@ -13,24 +31,28 @@ $body-font-size: 16px;
 html {
   font-size: $body-font-size;
 }
-
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
 // text styles mobile
 
-.small {
-  font-size: 0.916rem;
-  line-height: 1.25rem;
-}
+// .small {
+//   font-size: 0.916rem;
+//   line-height: 1.25rem;
+// }
 
-.medium {
-  font-size: 1rem;
-  line-height: 1.25rem;
-  letter-spacing: 0.1rem;
-}
+// .medium {
+//   font-size: 1rem;
+//   line-height: 1.25rem;
+//   letter-spacing: 0.1rem;
+// }
 
-.large {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
+// .large {
+//   font-size: 2.25rem;
+//   line-height: 2.5rem;
+// }
 
 // card styles
 body {
@@ -105,6 +127,55 @@ body {
       @media (min-width: 1920px) {
         width: 292px;
         height: 330px;
+      }
+    }
+  }
+  //postcard styles
+  .postcard {
+    width: 375px;
+    height: 272px;
+    padding: 0 0 15px 15px;
+    background-color: gray;
+    display: flex;
+    align-items: end;
+    // background-image: url("../images/postcard.png");
+
+    &__btn {
+      width: auto;
+      height: auto;
+      background-color: $bg-white;
+      border: 1px solid $text-color;
+      padding: 7px 9px;
+    }
+
+    &__text {
+      text-transform: uppercase;
+      text-align: center;
+      color: $text-color;
+      font-size: $text-size-16pt;
+      line-height: $text-lh-20pt;
+      letter-spacing: $text-letterspacing-100pt;
+    }
+
+    @media (min-width: 1280px) {
+      width: 640px;
+      height: 450px;
+
+      &__text {
+        font-size: $text-size-20pt;
+        line-height: $text-lh-24pt;
+        letter-spacing: $text-letterspacing-100pt;
+      }
+    }
+
+    @media (min-width: 1920px) {
+      width: 960px;
+      height: 673px;
+
+      &__text {
+        font-size: $text-size-28pt;
+        line-height: $text-lh-32pt;
+        letter-spacing: $text-letterspacing-100pt;
       }
     }
   }
