@@ -490,6 +490,12 @@ body {
       &:nth-child(3) {
         background-color: blue;
       }
+
+      img {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+      }
     }
 
     &__slide-inner {
