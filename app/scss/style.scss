@@ -114,20 +114,16 @@ body {
       display: flex;
       justify-content: space-between;
       padding-top: 10px;
+      font-size: 11px;
+      line-height: 15px;
     }
 
     &__image {
       width: 165px;
       height: 186px;
+      object-fit: cover;
       // width: 10.3rem;
       // height: 11.6rem;
-      background-color: red;
-
-      &__title,
-      &__price {
-        font-size: $text-size-11pt;
-        line-height: $text-lh-15pt;
-      }
 
       @media (min-width: 1280px) {
         width: 221px;
