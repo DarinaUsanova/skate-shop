@@ -150,7 +150,10 @@ body {
     background-color: gray;
     display: flex;
     align-items: end;
-    // background-image: url("../images/postcard.png");
+    background-image: url("../images/okt2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
     &__btn {
       width: auto;
