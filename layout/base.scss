@@ -32,6 +32,17 @@ $text-letterspacing-100pt: 0.4rem;
 html {
   font-size: $body-font-size;
 }
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
   font-family: "Consolas", "Roboto", "Helvetica Neue", "Arial", Courier,
     monospace;
