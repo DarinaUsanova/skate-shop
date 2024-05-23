@@ -293,7 +293,6 @@ body {
 .item {
   width: 165px;
   height: 186px;
-  background-color: pink;
 }
 @media (min-width: 1280px) {
   .item {
@@ -455,7 +454,6 @@ body {
 .articles .article-card__image {
   width: 165px;
   height: 93px;
-  background-color: pink;
 }
 .articles .article-card__info {
   display: flex;
