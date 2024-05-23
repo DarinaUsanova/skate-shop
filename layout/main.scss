@@ -110,42 +110,38 @@
 
 // card styles
 
-// banner card styles
-.card__container {
+// // banner card styles
+.card {
   grid-area: b;
-  // grid-row: 6 / 8;
   background-color: $bg-white;
-  padding: 0 15px;
   // width: 23.5rem;
   // height: 13.5rem;
+  padding: 0 15px;
+
+  &.banner--2 {
+    grid-area: b2;
+  }
 
   @media (min-width: 1280px) {
-    grid-column-start: 10;
     padding-bottom: 16px;
     padding-right: 16px;
-    // width: 537px;
-    // height: 285px;
   }
 
   @media (min-width: 1920px) {
-    grid-column-start: 9;
+    // grid-column-start: 9;
     padding-bottom: 16px;
     padding-right: 16px;
     // width: 808px;
     // height: 330px;
-  }
 
-  &.banner--2 {
-    grid-area: b2;
-
-    @media (min-width: 1920px) {
+    &.banner--2 {
       display: none;
     }
   }
 
-  .card__banner {
+  &__banner {
     border: 0.125rem solid $text-color;
-    // width: auto;
+    width: auto;
     height: 11.6rem;
     display: flex;
     justify-content: center;
@@ -157,7 +153,71 @@
       height: 100%;
     }
   }
+  &__text {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: $text-size-16pt;
+    line-height: $text-lh-20pt;
+    letter-spacing: $text-letterspacing-100pt;
+
+    @media (min-width: 1280px) {
+      font-size: $text-size-20pt;
+      line-height: $text-lh-24pt;
+    }
+
+    @media (min-width: 1920px) {
+      font-size: $text-size-28pt;
+      line-height: $text-lh-32pt;
+    }
+  }
 }
+// .card__container {
+//   grid-area: b;
+//   // grid-row: 6 / 8;
+//   background-color: $bg-white;
+//   padding: 0 15px;
+//   // width: 23.5rem;
+//   // height: 13.5rem;
+
+//   @media (min-width: 1280px) {
+//     grid-column-start: 10;
+//     padding-bottom: 16px;
+//     padding-right: 16px;
+//     // width: 537px;
+//     // height: 285px;
+//   }
+
+//   @media (min-width: 1920px) {
+//     grid-column-start: 9;
+//     padding-bottom: 16px;
+//     padding-right: 16px;
+//     // width: 808px;
+//     // height: 330px;
+//   }
+
+//   &.banner--2 {
+//     grid-area: b2;
+
+//     @media (min-width: 1920px) {
+//       display: none;
+//     }
+//   }
+
+//   .card__banner {
+//     border: 0.125rem solid $text-color;
+//     // width: auto;
+//     height: 11.6rem;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+
+//     @media (min-width: 1280px) {
+//       width: 100%;
+//       height: 100%;
+//     }
+//   }
+// }
 
 //product card styles mobile
 .product-card {
