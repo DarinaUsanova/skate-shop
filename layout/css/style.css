@@ -80,10 +80,43 @@ body {
   gap: 15px;
   padding: 0 15px;
 }
+.slider__slide {
+  flex: 0 1 100%;
+  width: 315px;
+  height: 591px;
+}
+.slider__slide img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+.slider__slide-inner {
+  margin: 15px;
+}
+.slider__slide-text {
+  text-transform: uppercase;
+  font-size: 3rem;
+  line-height: 3.33rem;
+  margin-bottom: 15px;
+}
+.slider__slide-btn {
+  border: 1px solid #000;
+  padding: 5px 15px;
+  font-size: 0.92rem;
+}
 @media (min-width: 1280px) {
+  .slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
   .slider__inner {
     gap: 16px;
     padding: 0 16px;
+  }
+  .slider__slide {
+    width: 1090px;
+    height: 760px;
   }
 }
 @media (min-width: 1920px) {
@@ -130,8 +163,11 @@ body {
 }
 @media (min-width: 1280px) {
   .card {
-    padding-bottom: 16px;
-    padding-right: 16px;
+    padding: 0 16px 16px 0;
+    grid-column-start: 10;
+  }
+  .card.banner--2 {
+    padding: 0 16px 16px 16px;
   }
 }
 @media (min-width: 1920px) {
@@ -154,8 +190,8 @@ body {
 }
 @media (min-width: 1280px) {
   .card__banner {
-    width: 100%;
-    height: 100%;
+    width: 537px;
+    height: 285px;
   }
 }
 .card__text {
@@ -233,11 +269,17 @@ body {
   .items {
     flex-wrap: nowrap;
     gap: 16px;
+    padding: 0 16px;
+  }
+  .items.items--2 {
+    grid-column-start: 8;
+    padding: 0 16px 16px 0;
   }
 }
 @media (min-width: 1920px) {
   .items {
     gap: 24px;
+    padding: 0 24px;
   }
 }
 
@@ -486,7 +528,7 @@ body {
   border-bottom: 1px solid #000;
   position: absolute;
   left: -149px;
-  top: -61px;
+  top: -60.7px;
   rotate: 45deg;
 }
 .contacts .subscribe-card__bottom {
@@ -532,18 +574,50 @@ body {
     height: 735px;
   }
 }
-.contacts__info {
+.contacts .contacts {
   width: 100%;
   height: 80px;
-  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #ababab;
+  padding: 15px;
+  font-size: 10px;
+  line-height: 15px;
+}
+.contacts .contacts__info {
+  width: 375px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.contacts .contacts__social {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 @media (min-width: 1280px) {
-  .contacts__info {
+  .contacts .contacts {
+    width: 100%;
     height: 57px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contacts .contacts__info {
+    width: 600px;
+    position: relative;
+    flex-direction: column;
+  }
+  .contacts .contacts__phone {
+    position: absolute;
+    top: 15px;
+    right: 190px;
   }
 }
 @media (min-width: 1920px) {
-  .contacts__info {
+  .contacts .contacts {
     height: 85px;
+    padding: 24px;
   }
 }
