@@ -38,21 +38,15 @@
       "i i i i i i i i b b b b"
       "p p p p p p p p p p p p"
       "b2 b2 b2 b2 b2 b2 b2 b2 i2 i2 i2 i2"
-      "e e e e e e e e e e e e "
-      "a a a a a a a a a a a a "
-      "c c c c c c c c c c c c ";
+      "e e e e e e e e e e e e"
+      "a a a a a a a a a a a a"
+      "c c c c c c c c c c c c";
   }
 }
 
+//Slider styles
 .slider {
   grid-area: s;
-  // flex: 1 1 auto;
-  // width: auto;
-  // height: 591px;
-  // width: fit-content;
-  // grid-row: 1 / 5;
-  // grid-column: 0 / 5;
-  // padding: 0 15px;
   overflow-x: auto;
 
   &::-webkit-scrollbar {
@@ -71,18 +65,6 @@
     flex: 0 1 100%;
     width: 315px;
     height: 591px;
-
-    // &:nth-child(1) {
-    //   background-color: grey;
-    // }
-
-    // &:nth-child(2) {
-    //   background-color: green;
-    // }
-
-    // &:nth-child(3) {
-    //   background-color: blue;
-    // }
 
     img {
       width: inherit;
@@ -135,8 +117,6 @@
   flex: 0 1 100%;
   width: 315px;
   height: 591px;
-  // grid-column: 1 / 5;
-  // background-color: pink;
 
   &:nth-child(1) {
     background-color: red;
@@ -161,14 +141,10 @@
   }
 }
 
-// card styles
-
-// // banner card styles
+// banner card styles
 .card {
   grid-area: b;
   background-color: $bg-white;
-  // width: 23.5rem;
-  // height: 13.5rem;
   padding: 0 15px;
 
   &.banner--2 {
@@ -185,7 +161,7 @@
   }
 
   @media (min-width: 1920px) {
-    // grid-column-start: 9;
+    grid-column-start: 9;
     padding-bottom: 16px;
     padding-right: 16px;
     // width: 808px;
@@ -208,6 +184,11 @@
     @media (min-width: 1280px) {
       width: 537px;
       height: 285px;
+    }
+
+    @media (min-width: 1920px) {
+      width: 608px;
+      height: 330px;
     }
   }
   &__text {
