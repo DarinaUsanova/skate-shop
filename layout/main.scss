@@ -371,17 +371,53 @@
     width: 100%;
     // width: 375px;
     height: 272px;
-    background-color: pink;
+    padding: 0 0 15px 15px;
+    background-color: gray;
+    display: flex;
+    align-items: end;
+    background-image: url("../images/okt2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__btn {
+      width: auto;
+      height: auto;
+      background-color: $bg-white;
+      border: 1px solid $text-color;
+      padding: 7px 9px;
+    }
+
+    &__text {
+      text-transform: uppercase;
+      text-align: center;
+      color: $text-color;
+      font-size: $text-size-16pt;
+      line-height: $text-lh-20pt;
+      letter-spacing: $text-letterspacing-100pt;
+    }
 
     @media (min-width: 1280px) {
       // width: 640px;
       // width: 100%;
       height: 450px;
+
+      &__text {
+        font-size: $text-size-20pt;
+        line-height: $text-lh-24pt;
+        letter-spacing: $text-letterspacing-100pt;
+      }
     }
 
     @media (min-width: 1920px) {
       // width: 960px;
       height: 673px;
+
+      &__text {
+        font-size: $text-size-28pt;
+        line-height: $text-lh-32pt;
+        letter-spacing: $text-letterspacing-100pt;
+      }
     }
   }
 }
