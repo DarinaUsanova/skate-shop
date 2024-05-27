@@ -6,7 +6,6 @@ const clean = require("gulp-clean");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const ghPages = require("gh-pages");
-const imagemin = require("gulp-imagemin");
 
 function styles() {
   return src("layout/css/style.scss")
@@ -33,7 +32,7 @@ function layoutStyles() {
 }
 
 function images() {
-  return src("layout/images/**/*").pipe(imagemin()).pipe(dest("dist/images"));
+  return src("layout/images/**/*").pipe(dest("dist/images"));
 }
 
 function watcher() {
