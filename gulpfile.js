@@ -55,7 +55,7 @@ function initBrowserSync() {
 }
 
 function building() {
-  return src(["layout/css/style.css", "layout/*.html", "layout/images/**/*"], {
+  return src(["layout/css/style.css", "layout/*.html"], {
     base: "layout",
   }).pipe(dest("dist"));
 }
@@ -73,8 +73,8 @@ exports.images = images;
 exports.watcher = watcher;
 exports.browserSync = initBrowserSync;
 
-exports.build = series(cleanDist, parallel(building, images));
-exports.deploy = series(cleanDist, parallel(building, images), deploy);
+exports.build = series(cleanDist, parallel(building));
+exports.deploy = series(parallel(building), deploy);
 exports.default = parallel(
   styles,
   layoutStyles,
